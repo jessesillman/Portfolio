@@ -1,0 +1,16 @@
+.custom-outline-primary.non-interactive {
+    border-color: #007bff; /* This is the default color for outline-primary */
+    color: #007bff;
+    background-color: transparent;
+    pointer-events: none;
+    cursor: default;
+  }
+  
+  .custom-outline-primary.non-interactive:hover,
+  .custom-outline-primary.non-interactive:disabled {
+    border-color: #007bff; /* Keeps the border color on hover and when disabled */
+    color: #007bff; /* Keeps the text color on hover and when disabled */
+    background-color: transparent; /* Ensures the background doesn't change on hover */
+    box-shadow: none; /* Removes any shadow effect on hover */
+    cursor: default;
+  }
