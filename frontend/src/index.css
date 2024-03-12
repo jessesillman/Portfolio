@@ -80,7 +80,6 @@ button:focus-visible {
   border-color: #007bff; /* Keeps the border color on hover and when disabled */
   color: #007bff; /* Keeps the text color on hover and when disabled */
   background-color: transparent; /* Ensures the background doesn't change on hover */
-  opacity: 1 !important; /* Ensures the button isn't translucent */
   box-shadow: none; /* Removes any shadow effect on hover */
   cursor: default;
 }

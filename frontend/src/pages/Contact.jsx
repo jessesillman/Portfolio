@@ -1,10 +1,36 @@
+import { useRef } from 'react';
 import { Card, Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 const ContactForm = () => {
+  const formRef = useRef(null);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Here you would typically handle the form submission, like sending the data to a server.
-    console.log("Form submitted!");
+    const formData = {
+      name: event.target.elements.formBasicName.value,
+      email: event.target.elements.formBasicEmail.value,
+      message: event.target.elements.formBasicMessage.value,
+    };
+    
+    fetch('http://localhost:5000/api/contact', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(formData),
+})
+    .then(response => {
+      if (response.ok) {
+        alert('Message sent successfully!');
+        formRef.current.reset();
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('There was a problem sending your message.');
+    });
   };
 
   return (
@@ -12,9 +38,9 @@ const ContactForm = () => {
       <Row>
         <Col md={12}>
           <Card className="mb-3">
-          <Card.Header style={{ fontWeight: 'bold' }}>Contact me</Card.Header>
+            <Card.Header style={{ fontWeight: 'bold' }}>Contact me</Card.Header>
             <Card.Body>
-              <Form onSubmit={handleSubmit}>
+              <Form ref={formRef} onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                   <Form.Label>Name</Form.Label>
                   <Form.Control type="text" placeholder="Enter your name" required />
