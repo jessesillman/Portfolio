@@ -12,7 +12,7 @@ const ContactForm = () => {
       message: event.target.elements.formBasicMessage.value,
     };
     
-    fetch('http://localhost:5000/api/contact', {
+    fetch('https://api.render.com/deploy/srv-cno5tc7sc6pc73bbt2sg?key=7IzAvzR4Y78', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',

@@ -31,6 +31,7 @@ const Contact = mongoose.model('Contact', contactSchema);
 
 // Middleware
 app.use(cors());
+
 app.use(bodyParser.json());
 
 // POST endpoint for submitting contact form
