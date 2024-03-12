@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -7,7 +9,7 @@ const app = express();
 
 // MongoDB connection string
 // Replace 'mongodb://localhost:27017/contactDB' with your actual MongoDB URI if needed
-const mongoURI = 'mongodb+srv://jessesillman:14johyooM@portfolio.tipc7mo.mongodb.net/?retryWrites=true&w=majority&appName=Portfolio';
+const mongoURI = process.env.MONGODB_URI;
 
 // Connect to MongoDB
 mongoose.connect(mongoURI, {
