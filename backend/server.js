@@ -7,7 +7,7 @@ const app = express();
 
 // MongoDB connection string
 // Replace 'mongodb://localhost:27017/contactDB' with your actual MongoDB URI if needed
-const mongoURI = 'mongodb://localhost:27017/contactDB';
+const mongoURI = 'mongodb+srv://jessesillman:14johyooM@portfolio.tipc7mo.mongodb.net/?retryWrites=true&w=majority&appName=Portfolio';
 
 // Connect to MongoDB
 mongoose.connect(mongoURI, {
