@@ -12,24 +12,26 @@ const ContactForm = () => {
       message: event.target.elements.formBasicMessage.value,
     };
     
-    fetch('https://api.render.com/deploy/srv-cno5tc7sc6pc73bbt2sg?key=7IzAvzR4Y78', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(formData),
-})
+    fetch('https://portfolio-silk.onrender.com/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
     .then(response => {
-      if (response.ok) {
-        alert('Message sent successfully!');
-        formRef.current.reset();
-      } else {
-        throw new Error('Network response was not ok.');
+      if (!response.ok) {
+        return response.json().then(data => Promise.reject(data));
       }
+      return response.json();
+    })
+    .then(data => {
+      alert(data.message);
+      formRef.current.reset();
     })
     .catch((error) => {
       console.error('Error:', error);
-      alert('There was a problem sending your message.');
+      alert(error.message || 'There was a problem sending your message.');
     });
   };
 
