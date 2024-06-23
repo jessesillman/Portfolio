@@ -40,7 +40,7 @@ const ContactForm = () => {
       <Row>
         <Col md={12}>
           <Card className="mb-3">
-            <Card.Header style={{ fontWeight: 'bold' }}>Contact me</Card.Header>
+            <Card.Header style={{ fontWeight: 'bold' }}>Let's keep in touch!</Card.Header>
             <Card.Body>
               <Form ref={formRef} onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicName">

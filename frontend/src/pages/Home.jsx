@@ -1,6 +1,6 @@
 import { Card, Container, Row, Col, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 const openCV = () => {
   window.open('/CVEnglish_JesseSillman.pdf', '_blank');
@@ -44,6 +44,9 @@ const Home = () => {
                     </a>
                     <a href="https://linkedin.com/in/jesse-sillman-5b6912269/" target="_blank" rel="noopener noreferrer">
                       <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </a>
+                    <a href="https://discord.gg/nwqQmCJd" target="_blank" rel="noopener noreferrer" className="ms-3">
+                      <FontAwesomeIcon icon={faDiscord} size="2x" />
                     </a>
                   </div>
                 </Col>

@@ -30,6 +30,9 @@ const Contact = () => {
             <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
               JavaScript
             </Button>
+            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
+              TypeScript
+            </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -64,7 +67,7 @@ const Contact = () => {
               MongoDB
             </Button>
             <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              MySQL
+              PostgreSQL
             </Button>
             </Card.Body>
           </Card>
@@ -101,6 +104,20 @@ const Contact = () => {
                     <Button variant="outline-primary">CCNA: Enterprise Networking, Security, and Automation</Button>
                 </a>
             </div>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      <Row className="mb-3">
+        <Col md={12}>
+          <Card>
+            <Card.Header>Certificate issued by AWS Academy</Card.Header>
+            <Card.Body>
+              <div className="d-flex flex-wrap">
+              <a href="https://www.credly.com/badges/d28a22d6-06e6-47d4-b42f-56abfb486887/public_url" style={{ textDecoration: 'none', margin: '5px', marginBottom: '10px' }}>
+                <Button variant="outline-primary">Cloud Foundations</Button>
+              </a>
+              </div>
             </Card.Body>
           </Card>
         </Col>
