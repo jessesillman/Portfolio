@@ -9,12 +9,8 @@ const app = express();
 
 const mongoURI = process.env.MONGODB_URI;
 
-
 console.log(`Connecting to MongoDB at URI: ${process.env.MONGODB_URI}`);
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(mongoURI)
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Could not connect to MongoDB', err));
 

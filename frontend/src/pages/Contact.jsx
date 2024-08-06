@@ -1,5 +1,7 @@
 import { useRef } from 'react';
 import { Card, Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 const ContactForm = () => {
   const formRef = useRef(null);
@@ -39,6 +41,22 @@ const ContactForm = () => {
     <Container className="p-3">
       <Row>
         <Col md={12}>
+          <Card className="mb-3">
+            <Card.Header style={{ fontWeight: 'bold' }}>Contact Information</Card.Header>
+            <Card.Body>
+              <p><strong>Email:</strong> <a href="mailto:jesse.sillman@yahoo.com">jesse.sillman@yahoo.com</a></p>
+              <p><strong>Phone:</strong> <a href="tel:+35840139866">+35840139866</a></p>
+              <a href="https://github.com/jessesillman" target="_blank" rel="noopener noreferrer" className="me-3">
+                      <FontAwesomeIcon icon={faGithub} size="2x" />
+                    </a>
+                    <a href="https://linkedin.com/in/jesse-sillman-5b6912269/" target="_blank" rel="noopener noreferrer">
+                      <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </a>
+                    <a href="https://discord.gg/nwqQmCJd" target="_blank" rel="noopener noreferrer" className="ms-3">
+                      <FontAwesomeIcon icon={faDiscord} size="2x" />
+                    </a>
+            </Card.Body>
+          </Card>
           <Card className="mb-3">
             <Card.Header style={{ fontWeight: 'bold' }}>Let's keep in touch!</Card.Header>
             <Card.Body>

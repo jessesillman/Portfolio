@@ -69,6 +69,9 @@ const Contact = () => {
             <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
               PostgreSQL
             </Button>
+            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
+              MySQL
+            </Button>
             </Card.Body>
           </Card>
         </Col>
