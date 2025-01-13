@@ -32,12 +32,17 @@ const Home = () => {
                     <Card.Text className="text-start">
                       I am an enthusiastic IT-engineer student based in Finland, 
                       who has a strong foundation in modern network technologies, 
-                      IoT applications, and programming.
+                      IoT applications, and programming. I am currently seeking and 
+                      an internship as part of my studies, and am also
+                      to job opportunities in the IT field.
                     </Card.Text>
                     <button type="button" className="btn btn-outline-primary mt-3" onClick={openCV}>
                       View my CV
                     </button>
                     <br/>
+                    <Card.Text className="text-start mt-3">
+                      <b>If you would like to view my current transcript of studies, please feel free to contact me directly.</b>
+                    </Card.Text>
                     <br/>
                     <a href="https://github.com/jessesillman" target="_blank" rel="noopener noreferrer" className="me-3">
                       <FontAwesomeIcon icon={faGithub} size="2x" />

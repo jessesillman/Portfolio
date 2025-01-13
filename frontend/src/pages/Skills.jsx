@@ -22,16 +22,19 @@ const Contact = () => {
             <Card.Header>Languages</Card.Header>
             <Card.Body>
             <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              Python
+              C#
             </Button>
             <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              C#
+              C/C++
+            </Button>
+            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
+              Java
             </Button>
             <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
               JavaScript
             </Button>
             <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              TypeScript
+              Python
             </Button>
             </Card.Body>
           </Card>
