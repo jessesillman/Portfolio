@@ -37,11 +37,15 @@ const Home = () => {
                       to job opportunities in the IT field.
                     </Card.Text>
                     <button type="button" className="btn btn-outline-primary mt-3 me-2" onClick={openCV}>
-                      View my CV
+                      My CV
                     </button>
-                    <button type="button" className="btn btn-outline-primary mt-3" onClick={() => window.open('https://www.credly.com/users/jesse-sillman')}>
-                      View my certificates
+                    <button type="button" className="btn btn-outline-primary mt-3 me-2" onClick={() => window.open('https://www.credly.com/users/jesse-sillman')}>
+                      My Cisco-issued certificates
                     </button>
+                    <button type="button" className="btn btn-outline-primary mt-3" onClick={() => window.open('https://www.credly.com/users/jesse-sillman.529aa756')}>
+                      My AWS-issued certificates
+                    </button>
+
                     <br/>
                     <Card.Text className="text-start mt-3">
                       <b>If you would like to view my current transcript of studies, please feel free to contact me directly.</b>
