@@ -36,8 +36,11 @@ const Home = () => {
                       an internship as part of my studies, and am also
                       to job opportunities in the IT field.
                     </Card.Text>
-                    <button type="button" className="btn btn-outline-primary mt-3" onClick={openCV}>
+                    <button type="button" className="btn btn-outline-primary mt-3 me-2" onClick={openCV}>
                       View my CV
+                    </button>
+                    <button type="button" className="btn btn-outline-primary mt-3" onClick={() => window.open('https://www.credly.com/users/jesse-sillman')}>
+                      View my certificates
                     </button>
                     <br/>
                     <Card.Text className="text-start mt-3">
