@@ -32,7 +32,8 @@ const Projects = () => {
                         <Card.Header style={{ fontWeight: 'bold' }}>Weather Station for ESP32 (IoT)</Card.Header>
                         <Card.Body>
                             <Card.Text>
-                                This project involves creating an IoT-based weather station that collects and displays weather data using various sensors and a Grafana dashboard.
+                            This project involved developing a scalable weather station using an ESP32 microcontroller for real-time data collection. It includes a Go-based API, an MQTT broker, 
+                            and InfluxDB-Grafana for data storage and visualization.  The system is automated with a single startup script for easy deployment.
                             </Card.Text>
                             < br />
                             <div style={{ display: 'flex', overflowX: 'auto' }}>
