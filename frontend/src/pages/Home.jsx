@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 const openCV = () => {
-  window.open('/CVEnglish_JesseSillman.pdf', '_blank');
+  window.open('/CV2025.pdf', '_blank');
 };
 
 const Home = () => {
