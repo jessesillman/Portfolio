@@ -1,8 +1,16 @@
 import { useState } from 'react';
 import { Card, Container, Row, Col, Modal } from 'react-bootstrap';
 import '../Skills.modules.css';
+import { useOutletContext }  from 'react-router-dom';
+import en from '../localization/en.json';
+import fin from '../localization/fin.json';
+
+const localization = { en, fin };
 
 const Projects = () => {
+    const { language } = useOutletContext();
+    const t = localization[language].Projects;
+
     const [show, setShow] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
 
@@ -17,10 +25,10 @@ const Projects = () => {
             <Row className="mb-3">
                 <Col md={12}>
                     <Card>
-                        <Card.Header style={{ fontWeight: 'bold' }}>Projects</Card.Header>
+                        <Card.Header style={{ fontWeight: 'bold' }}>{t.projectsTitle}</Card.Header>
                         <Card.Body>
                             <Card.Text>
-                                More projects will be updated in this page soon. Feel free to check out my <a href="https://github.com/jessesillman" target="_blank" rel="noopener noreferrer">GitHub profile</a> in the meantime.
+                                <span dangerouslySetInnerHTML={{ __html: t.description }} />
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -29,11 +37,10 @@ const Projects = () => {
             <Row>
                 <Col md={12}>
                     <Card className="mb-3">
-                        <Card.Header style={{ fontWeight: 'bold' }}>Weather Station for ESP32 (IoT)</Card.Header>
+                        <Card.Header style={{ fontWeight: 'bold' }}>{t.weatherStation}</Card.Header>
                         <Card.Body>
                             <Card.Text>
-                            This project involved developing a scalable weather station using an ESP32 microcontroller for real-time data collection. It includes a Go-based API, an MQTT broker, 
-                            and InfluxDB-Grafana for data storage and visualization. The system is automated with a single startup script for easy deployment.
+                                {t.weatherStationDesc}
                             </Card.Text>
                             < br />
                             <div style={{ display: 'flex', overflowX: 'auto' }}>
@@ -67,12 +74,10 @@ const Projects = () => {
             <Row>
                 <Col md={12}>
                     <Card className="mb-3">
-                        <Card.Header style={{ fontWeight: 'bold' }}>Face Mask Detector (Machine Learning)</Card.Header>
+                        <Card.Header style={{ fontWeight: 'bold' }}>{t.faceMaskDetector}</Card.Header>
                         <Card.Body>
                             <Card.Text>
-                                This project involved preprocessing image dataset from Kaggle, converting annotations into YOLO format, and filtering images for single-person detections.
-                                YOLOv11 was used for real-time detection of face masks, and a custom Connvolutional Neural Network (CNN) and RetinaNet were trained to classify masked
-                                and unmasked faces.
+                                {t.faceMaskDetectorDesc}
                             </Card.Text>
                             < br />
                             <div style={{ display: 'flex', overflowX: 'auto' }}>
@@ -106,11 +111,10 @@ const Projects = () => {
             <Row>
                 <Col md={12}>
                     <Card className="mb-3">
-                        <Card.Header style={{ fontWeight: 'bold' }}>Simple Task/Activity Manager (FullStack)</Card.Header>
+                        <Card.Header style={{ fontWeight: 'bold' }}>{t.taskManager}</Card.Header>
                         <Card.Body>
                             <Card.Text>
-                                This project involved creating a web application using React for the frontend, styled with Bootstrap, and backend built with Node.js, Express, and
-                                PostgreSQL for the database. The project also involved creating a RESTful API for CRUD operations.
+                                {t.taskManagerDesc}
                             </Card.Text>
                             < br />
                             <div style={{ display: 'flex', overflowX: 'auto' }}>
@@ -146,13 +150,10 @@ const Projects = () => {
             <Row>
                 <Col md={12}>
                     <Card className="mb-3">
-                        <Card.Header style={{ fontWeight: 'bold' }}>Fitness Tracker Application with Tkinter Python</Card.Header>
+                        <Card.Header style={{ fontWeight: 'bold' }}>{t.fitnessTracker}</Card.Header>
                         <Card.Body>
                             <Card.Text>
-                                This project involved creating a fitness tracker application using Tkinter in Python. The application allows users to track their workouts, calculate
-                                calories burned and bmi, and set a meal plan. The aim was to get acquainted with GUI programming in Python.
-
-
+                                {t.fitnessTrackerDesc}
                             </Card.Text>
                             < br />
                             <div style={{ display: 'flex', overflowX: 'auto' }}>
@@ -204,13 +205,10 @@ const Projects = () => {
             <Row>
                 <Col md={12}>
                     <Card className="mb-3">
-                        <Card.Header style={{ fontWeight: 'bold' }}>Simple mobile app projects using Java on Android Studio</Card.Header>
+                        <Card.Header style={{ fontWeight: 'bold' }}>{t.mobileApp}</Card.Header>
                         <Card.Body>
                             <Card.Text>
-                                These projects involved creating simple mobile applications using Java on Android Studio. The applications include a simple calculator with intent operations, image viewer, and a media player. The aim was to get acquainted
-                                with android development and Java programming.
-
-
+                                {t.mobileAppDesc}
                             </Card.Text>
                             < br />
                             <div style={{ display: 'flex', overflowX: 'auto' }}>
@@ -247,10 +245,10 @@ const Projects = () => {
             <Row>
                 <Col md={12}>
                     <Card className="mb-3">
-                        <Card.Header style={{ fontWeight: 'bold' }}>The demonstration of GitLab CI/CD and Azure with container images</Card.Header>
+                        <Card.Header style={{ fontWeight: 'bold' }}>{t.gitlabCICD}</Card.Header>
                         <Card.Body>
                             <Card.Text>
-                                This video demonstrates how to set up a GitLab CI/CD pipeline to build and push a container image to the Azure Container Registry. 
+                                {t.gitlabCICDDesc}
                             </Card.Text>
                             < br />
                             <div className="video-container" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', background: '#000', marginBottom: '10px' }}>

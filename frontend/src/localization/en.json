@@ -1,0 +1,82 @@
+{
+    "Navbar": {
+        "home": "Home",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact",
+        "language": "English"
+    },
+    "Home": {
+        "greeting": "Hello, my name is Jesse!",
+        "introduction": "I am a final year Information Technology (B.Eng.) student from South-Eastern Finland University of Applied Sciences, specializing in Full Stack development, machine learning, and modern technologies (especially Cisco).",
+        "cv": "My CV",
+        "cisco": "My Cisco-issued certificates",
+        "aws": "My AWS-issued certificates",
+        "transcript": "If you would like to to view my current academic transcript, please contact me directly."
+    },
+    "Skills": {
+        "title": "Skills",
+        "description": "Here are some of the technologies and tools I have experience with:",
+        "languages": "Programming Languages",
+        "languagesList": {
+            "python": "Python",
+            "js/ts": "JavaScript/TypeScript",
+            "java": "Java",
+            "csharp": "C#",
+            "cpp": "C++"
+        },
+        "frontend": "Frontend",
+        "frontendList": {
+            "react": "React",
+            "html/css": "HTML/CSS",
+            "bootstrap": "Bootstrap"
+        },
+        "backend": "Backend",
+        "backendList": {
+            "nodejs": "Node.js",
+            "express": "Express",
+            "sql": "SQL",
+            "mongodb": "MongoDB",
+            "serverless": "Serverless"
+        },
+        "devops": "DevOps & Cloud",
+        "devopsList": {
+            "azure": "Microsoft Azure",
+            "aws": "AWS",
+            "docker": "Docker",
+            "ci/cd": "CI/CD",
+            "git": "Git"
+        },
+        "networking": "Networking certificates issued by Cisco",
+        "awsacademy": "Certificates issued by AWS Academy"
+    },
+    "Projects": {
+        "projectsTitle": "Projects",
+        "description": "More projects will be updated in this page soon. Feel free to check out my <a href=\"https://github.com/jessesillman\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub profile</a> in the meantime.",
+        "weatherStation": "Weather Station for ESP32 (IoT)",
+        "weatherStationDesc": "This project involved developing a scalable weather station using an ESP32 microcontroller for real-time data collection. It includes a Go-based API, an MQTT broker, and InfluxDB-Grafana for data storage and visualization. The system is automated with a single startup script for easy deployment.",
+        "faceMaskDetector": "Face Mask Detector (Machine Learning)",
+        "faceMaskDetectorDesc": "This project involved preprocessing image dataset from Kaggle, converting annotations into YOLO format, and filtering images for single-person detections. YOLOv11 was used for real-time detection of face masks, and a custom Connvolutional Neural Network (CNN) and RetinaNet were trained to classify masked and unmasked faces.",
+        "taskManager": "Simple Task/Activity Manager (FullStack)",
+        "taskManagerDesc": "This project involved creating a web application using React for the frontend, styled with Bootstrap, and backend built with Node.js, Express, and PostgreSQL for the database. The project also involved creating a RESTful API for CRUD operations.",
+        "fitnessTracker": "Fitness Tracker Application with Tkinter Python",
+        "fitnessTrackerDesc": "This project involved creating a fitness tracker application using Tkinter in Python. The application allows users to track their workouts, calculate calories burned and bmi, and set a meal plan. The aim was to get acquainted with GUI programming in Python.",
+        "mobileApp": "Simple mobile app projects using Java on Android Studio",
+        "mobileAppDesc": "These projects involved creating simple mobile applications using Java on Android Studio. The applications include a simple calculator with intent operations, image viewer, and a media player. The aim was to get acquainted with android development and Java programming.",
+        "gitlabCICD": "The demonstration of GitLab CI/CD and Azure with container images",
+        "gitlabCICDDesc": "This video demonstrates how to set up a GitLab CI/CD pipeline to build and push a container image to the Azure Container Registry."
+    },
+    "Contact": {
+        "contactTitle": "Contact Information",
+        "emailLabel": "Email",
+        "phoneLabel": "Phone",
+        "keepInTouch": "Let's keep in touch!",
+        "formName": "Name",
+        "formNamePlaceholder": "Enter your name",
+        "formEmail": "Email",
+        "formEmailPlaceholder": "Enter your email",
+        "formMessage": "Message",
+        "formMessagePlaceholder": "Enter your message",
+        "formSubmit": "Submit"
+    }
+}

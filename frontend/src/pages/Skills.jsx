@@ -1,16 +1,24 @@
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
+import { useOutletContext } from 'react-router-dom';
+import en from '../localization/en.json';
+import fin from '../localization/fin.json';
 import '../Skills.modules.css';
 
-const Contact = () => {
+const localization = { en, fin };
+
+const Skills = () => {
+  const { language } = useOutletContext();
+  const t = localization[language].Skills;
+
   return (
     <Container className="p-3">
       <Row className="mb-3">
         <Col md={12}>
           <Card>
-          <Card.Header style={{ fontWeight: 'bold' }}>Skills</Card.Header>
+          <Card.Header style={{ fontWeight: 'bold' }}>{t.title}</Card.Header>
             <Card.Body>
               <Card.Text>
-                My skills and networking certificates are listed below:
+                {t.description}
               </Card.Text>
             </Card.Body>
           </Card>
@@ -19,23 +27,13 @@ const Contact = () => {
       <Row className="mb-3">
         <Col md={12}>
           <Card>
-            <Card.Header>Languages</Card.Header>
+            <Card.Header>{t.languages}</Card.Header>
             <Card.Body>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              C#
-            </Button>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              C/C++
-            </Button>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              Java
-            </Button>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              JavaScript
-            </Button>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              Python
-            </Button>
+              {Object.values(t.languagesList).map((lang, idx) => (
+                <Button key={lang + idx} variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
+                  {lang}
+                </Button>
+              ))}
             </Card.Body>
           </Card>
         </Col>
@@ -43,17 +41,13 @@ const Contact = () => {
       <Row className="mb-3">
         <Col md={12}>
           <Card>
-            <Card.Header>Frontend</Card.Header>
+            <Card.Header>{t.frontend}</Card.Header>
             <Card.Body>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              React.js
-            </Button>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              HTML
-            </Button>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              CSS
-            </Button>
+              {Object.values(t.frontendList).map((item, idx) => (
+                <Button key={item + idx} variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
+                  {item}
+                </Button>
+              ))}
             </Card.Body>
           </Card>
         </Col>
@@ -61,20 +55,13 @@ const Contact = () => {
       <Row className="mb-3">
         <Col md={12}>
           <Card>
-            <Card.Header>Backend</Card.Header>
+            <Card.Header>{t.backend}</Card.Header>
             <Card.Body>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              Node.js
-            </Button>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              MongoDB
-            </Button>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              PostgreSQL
-            </Button>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              MySQL
-            </Button>
+              {Object.values(t.backendList).map((item, idx) => (
+                <Button key={item + idx} variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
+                  {item}
+                </Button>
+              ))}
             </Card.Body>
           </Card>
         </Col>
@@ -82,11 +69,13 @@ const Contact = () => {
       <Row className="mb-3">
         <Col md={12}>
           <Card>
-            <Card.Header>Container Technology</Card.Header>
+            <Card.Header>{t.devops}</Card.Header>
             <Card.Body>
-            <Button variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
-              Docker
-            </Button>
+              {Object.values(t.devopsList).map((item, idx) => (
+                <Button key={item + idx} variant="outline-primary" className="custom-outline-primary non-interactive" style={{ margin: '5px' }}>
+                  {item}
+                </Button>
+              ))}
             </Card.Body>
           </Card>
         </Col>
@@ -137,4 +126,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Skills;

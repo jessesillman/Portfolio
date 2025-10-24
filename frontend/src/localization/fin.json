@@ -1,0 +1,82 @@
+{
+    "Navbar": {
+        "home": "Etusivu",
+        "skills": "Taidot",
+        "projects": "Projektit",
+        "contact": "Yhteystiedot",
+        "language": "Suomi"
+    },
+    "Home": {
+        "greeting": "Hei, mä oon Jesse!",
+        "introduction": "Olen viimeisen vuoden tietotekniikan insinööriopiskelija Kaakkois-Suomen ammattikorkeakoulusta, erikoistuen Full Stack -kehitykseen, koneoppimiseen ja moderneihin teknologioihin (erityisesti Ciscolla).",
+        "cv": "CV:ni",
+        "cisco": "Cisco-sertifikaatit",
+        "aws": "AWS-sertifikaatit",
+        "transcript": "Jos haluat nähdä nykyisen opintosuoritusotteeni, ota minuun suoraan yhteyttä."
+    },
+    "Skills": {
+        "title": "Taidot",
+        "description": "Tässä on joitakin teknologioita ja työkaluja, joista minulla on kokemusta:",
+        "languages": "Ohjelmointikielet",
+        "languagesList": {
+            "python": "Python",
+            "js/ts": "JavaScript/TypeScript",
+            "java": "Java",
+            "csharp": "C#",
+            "cpp": "C++"
+        },
+        "frontend": "Frontend",
+        "frontendList": {
+            "react": "React",
+            "html/css": "HTML/CSS",
+            "bootstrap": "Bootstrap"
+        },
+        "backend": "Backend",
+        "backendList": {
+            "nodejs": "Node.js",
+            "express": "Express",
+            "sql": "SQL",
+            "mongodb": "MongoDB",
+            "serverless": "Serverless"
+        },
+        "devops": "DevOps & Pilvi",
+        "devopsList": {
+            "azure": "Microsoft Azure",
+            "aws": "AWS",
+            "docker": "Docker",
+            "ci/cd": "CI/CD",
+            "git": "Git"
+        },
+        "networking": "Cisco-sertifikaatit",
+        "awsacademy": "AWS Academy -sertifikaatti"
+    },
+    "Projects": {
+        "projectsTitle": "Projektit",
+        "description": "Lisää projekteja päivitetään tälle sivulle pian. Voit väliaikaisesti tutustua <a href=\"https://github.com/jessesillman\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub-profiiliini</a>.",
+        "weatherStation": "Sääasema ESP32:lle (IoT)",
+        "weatherStationDesc": "Tässä projektissa kehitettiin skaalautuva sääasema ESP32-mikrokontrollerilla reaaliaikaista datan keruuta varten. Kokonaisuuteen kuuluu Go-pohjainen API, MQTT-välityspalvelin sekä InfluxDB-Grafana datan tallennukseen ja visualisointiin. Järjestelmä on automatisoitu yhdellä käynnistysskriptillä helppoa käyttöönottoa varten.",
+        "faceMaskDetector": "Kasvomaskin tunnistus (Koneoppiminen)",
+        "faceMaskDetectorDesc": "Projektissa esikäsiteltiin Kagglesta ladattu kuvadatasetti, muunnettiin annotaatiot YOLO-muotoon ja suodatettiin kuvat yksittäisten henkilöiden tunnistukseen. YOLOv11:ta käytettiin kasvomaskien reaaliaikaiseen tunnistukseen, ja lisäksi koulutettiin oma konvoluutio-neuroverkko (CNN) sekä RetinaNet maskillisten ja maskittomien kasvojen luokitteluun.",
+        "taskManager": "Yksinkertainen tehtävä-/aktiviteettienhallinta (FullStack)",
+        "taskManagerDesc": "Projektissa toteutettiin web-sovellus, jossa frontend on tehty Reactilla ja Bootstrapilla, backend Node.js:llä ja Expressillä, ja tietokantana PostgreSQL. Lisäksi toteutettiin RESTful API CRUD-toimintoja varten.",
+        "fitnessTracker": "Fitness Tracker -sovellus Tkinterillä (Python)",
+        "fitnessTrackerDesc": "Projektissa tehtiin kuntoilun seurantaan sovellus Pythonin Tkinterillä. Sovelluksella voi seurata treenejä, laskea kulutetut kalorit ja BMI:n sekä laatia ateriasuunnitelman. Tavoitteena oli tutustua Pythonin käyttöliittymäohjelmointiin.",
+        "mobileApp": "Yksinkertaiset mobiilisovellusprojektit Javalla Android Studiolla",
+        "mobileAppDesc": "Näissä projekteissa toteutettiin yksinkertaisia mobiilisovelluksia Javalla Android Studiolla. Sovelluksiin kuuluu mm. laskin intent-toiminnoilla, kuvien katseluohjelma ja mediasoitin. Tavoitteena oli tutustua Android-kehitykseen ja Java-ohjelmointiin.",
+        "gitlabCICD": "GitLab CI/CD:n ja Azuren demonstraatio konttikuvilla",
+        "gitlabCICDDesc": "Tällä videolla näytetään, miten GitLab CI/CD -putki rakennetaan ja miten konttikuva pusketaan Azure Container Registryyn."
+    },
+    "Contact": {
+        "contactTitle": "Yhteystiedot",
+        "emailLabel": "Sähköposti",
+        "phoneLabel": "Puhelin",
+        "keepInTouch": "Pidetään yhteyttä!",
+        "formName": "Nimi",
+        "formNamePlaceholder": "Syötä nimesi",
+        "formEmail": "Sähköposti",
+        "formEmailPlaceholder": "Syötä sähköpostisi",
+        "formMessage": "Viesti",
+        "formMessagePlaceholder": "Kirjoita viestisi",
+        "formSubmit": "Lähetä"
+    }
+}

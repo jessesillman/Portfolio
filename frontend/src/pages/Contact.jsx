@@ -2,8 +2,15 @@ import { useRef } from 'react';
 import { Card, Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { useOutletContext } from 'react-router-dom';
+import en from '../localization/en.json';
+import fin from '../localization/fin.json';
+
+const localization = { en, fin };
 
 const ContactForm = () => {
+  const { language } = useOutletContext();
+  const t = localization[language].Contact;
   const formRef = useRef(null);
 
   const handleSubmit = (event) => {
@@ -42,10 +49,10 @@ const ContactForm = () => {
       <Row>
         <Col md={12}>
           <Card className="mb-3">
-            <Card.Header style={{ fontWeight: 'bold' }}>Contact Information</Card.Header>
+            <Card.Header style={{ fontWeight: 'bold' }}>{t.contactTitle}</Card.Header>
             <Card.Body>
-              <p><strong>Email:</strong> <a href="mailto:jesse.sillman@yahoo.com">jesse.sillman@yahoo.com</a></p>
-              <p><strong>Phone:</strong> <a href="tel:+35840139866">+35840139866</a></p>
+              <p><strong>{t.emailLabel}:</strong> <a href="mailto:jesse.sillman@yahoo.com">jesse.sillman@yahoo.com</a></p>
+              <p><strong>{t.phoneLabel}:</strong> <a href="tel:+35840139866">+35840139866</a></p>
               <a href="https://github.com/jessesillman" target="_blank" rel="noopener noreferrer" className="me-3">
                       <FontAwesomeIcon icon={faGithub} size="2x" />
                     </a>
@@ -58,26 +65,26 @@ const ContactForm = () => {
             </Card.Body>
           </Card>
           <Card className="mb-3">
-            <Card.Header style={{ fontWeight: 'bold' }}>Let's keep in touch!</Card.Header>
+            <Card.Header style={{ fontWeight: 'bold' }}>{t.keepInTouch}</Card.Header>
             <Card.Body>
               <Form ref={formRef} onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicName">
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter your name" required />
+                  <Form.Label>{t.formName}</Form.Label>
+                  <Form.Control type="text" placeholder={t.formNamePlaceholder} required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter your email" required />
+                  <Form.Label>{t.formEmail}</Form.Label>
+                  <Form.Control type="email" placeholder={t.formEmailPlaceholder} required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicMessage">
-                  <Form.Label>Message</Form.Label>
-                  <Form.Control as="textarea" rows={3} placeholder="Enter your message" required />
+                  <Form.Label>{t.formMessage}</Form.Label>
+                  <Form.Control as="textarea" rows={3} placeholder={t.formMessagePlaceholder} required />
                 </Form.Group>
 
                 <Button variant="outline-primary" type="submit">
-                  Submit
+                  {t.formSubmit}
                 </Button>
               </Form>
             </Card.Body>

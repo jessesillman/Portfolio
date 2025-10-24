@@ -1,12 +1,19 @@
 import { Card, Container, Row, Col, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { useOutletContext } from 'react-router-dom';
+import en from '../localization/en.json';
+import fin from '../localization/fin.json';
+
+const localization = { en, fin };
 
 const openCV = () => {
   window.open('/CV2025.pdf', '_blank');
 };
 
 const Home = () => {
+  const { language } = useOutletContext();
+  const t = localization[language].Home;
   const profilePictureUrl = '/jesseautumn.jpg';
 
   return (
@@ -28,27 +35,23 @@ const Home = () => {
                 {/* Text section */}
                 <Col md={7} className="d-flex align-items-center">
                   <div>
-                    <Card.Title className="text-start fs-2">Hello, my name is Jesse!</Card.Title>
+                    <Card.Title className="text-start fs-2">{t.greeting}</Card.Title>
                     <Card.Text className="text-start">
-                      I am an enthusiastic IT-engineer student based in Finland, 
-                      who has a strong foundation in modern network technologies, 
-                      IoT applications, and programming. I am currently seeking and 
-                      an internship as part of my studies, and am also
-                      to job opportunities in the IT field.
+                      {t.introduction}
                     </Card.Text>
                     <button type="button" className="btn btn-outline-primary mt-3 me-2" onClick={openCV}>
-                      My CV
+                      {t.cv}
                     </button>
                     <button type="button" className="btn btn-outline-primary mt-3 me-2" onClick={() => window.open('https://www.credly.com/users/jesse-sillman')}>
-                      My Cisco-issued certificates
+                      {t.cisco}
                     </button>
                     <button type="button" className="btn btn-outline-primary mt-3" onClick={() => window.open('https://www.credly.com/users/jesse-sillman.529aa756')}>
-                      My AWS-issued certificates
+                      {t.aws}
                     </button>
 
                     <br/>
                     <Card.Text className="text-start mt-3">
-                      <b>If you would like to view my current transcript of studies, please feel free to contact me directly.</b>
+                      <b>{t.transcript}</b>
                     </Card.Text>
                     <br/>
                     <a href="https://github.com/jessesillman" target="_blank" rel="noopener noreferrer" className="me-3">
