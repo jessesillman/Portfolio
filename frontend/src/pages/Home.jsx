@@ -14,7 +14,7 @@ const openCV = () => {
 const Home = () => {
   const { language } = useOutletContext();
   const t = localization[language].Home;
-  const profilePictureUrl = '/jesseautumn.jpg';
+  const profilePictureUrl = '/jesseportfolio.jpg';
 
   return (
     <Container className="p-3">

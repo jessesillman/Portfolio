@@ -1,0 +1,82 @@
+{
+  "hash": "da9d372f",
+  "configHash": "52c6bf4a",
+  "lockfileHash": "a41a7bfb",
+  "browserHash": "257f19f5",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "a4b30f20",
+      "needsInterop": true
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "fe88ec61",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "2bc17f11",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../node_modules/react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "c6e60ced",
+      "needsInterop": true
+    },
+    "@emailjs/browser": {
+      "src": "../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "693bc1c8",
+      "needsInterop": false
+    },
+    "@fortawesome/free-brands-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-brands-svg-icons/index.mjs",
+      "file": "@fortawesome_free-brands-svg-icons.js",
+      "fileHash": "585c3c29",
+      "needsInterop": false
+    },
+    "@fortawesome/react-fontawesome": {
+      "src": "../../node_modules/@fortawesome/react-fontawesome/dist/index.js",
+      "file": "@fortawesome_react-fontawesome.js",
+      "fileHash": "8802259b",
+      "needsInterop": false
+    },
+    "react-bootstrap": {
+      "src": "../../node_modules/react-bootstrap/esm/index.js",
+      "file": "react-bootstrap.js",
+      "fileHash": "8818439a",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "bbc8cb5c",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "6113fc26",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-LDHOQ6LT": {
+      "file": "chunk-LDHOQ6LT.js"
+    },
+    "chunk-G25MCSZ2": {
+      "file": "chunk-G25MCSZ2.js"
+    },
+    "chunk-HWMK2RSU": {
+      "file": "chunk-HWMK2RSU.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
+}

@@ -75,6 +75,8 @@
         "formNamePlaceholder": "Enter your name",
         "formEmail": "Email",
         "formEmailPlaceholder": "Enter your email",
+        "formTitle": "Title",
+        "formTitlePlaceholder": "Enter the title",
         "formMessage": "Message",
         "formMessagePlaceholder": "Enter your message",
         "formSubmit": "Submit"

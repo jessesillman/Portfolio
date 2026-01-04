@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { Card, Container, Row, Col, Form, Button } from 'react-bootstrap';
+import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { useOutletContext } from 'react-router-dom';
@@ -15,33 +16,19 @@ const ContactForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const formData = {
-      name: event.target.elements.formBasicName.value,
-      email: event.target.elements.formBasicEmail.value,
-      message: event.target.elements.formBasicMessage.value,
-    };
-    
-    fetch('https://portfolio-silk.onrender.com/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-    .then(response => {
-      if (!response.ok) {
-        return response.json().then(data => Promise.reject(data));
-      }
-      return response.json();
-    })
-    .then(data => {
-      alert(data.message);
-      formRef.current.reset();
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      alert(error.message || 'There was a problem sending your message.');
-    });
+
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .then(() => {
+        alert(t.formSent || 'Message sent.');
+        formRef.current.reset();
+      }, (error) => {
+        console.error('EmailJS error:', error);
+        alert(t.formSendError || 'There was a problem sending your message.');
+      });
   };
 
   return (
@@ -70,20 +57,25 @@ const ContactForm = () => {
               <Form ref={formRef} onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                   <Form.Label>{t.formName}</Form.Label>
-                  <Form.Control type="text" placeholder={t.formNamePlaceholder} required />
+                  <Form.Control name="name" type="text" placeholder={t.formNamePlaceholder} required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>{t.formEmail}</Form.Label>
-                  <Form.Control type="email" placeholder={t.formEmailPlaceholder} required />
+                  <Form.Control name="email" type="email" placeholder={t.formEmailPlaceholder} required />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicTitle">
+                  <Form.Label>{t.formTitle}</Form.Label>
+                  <Form.Control name="title" type="text" placeholder={t.formTitlePlaceholder} required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicMessage">
                   <Form.Label>{t.formMessage}</Form.Label>
-                  <Form.Control as="textarea" rows={3} placeholder={t.formMessagePlaceholder} required />
+                  <Form.Control name="message" as="textarea" rows={3} placeholder={t.formMessagePlaceholder} required />
                 </Form.Group>
 
-                <Button variant="outline-primary" type="submit">
+                <Button variant="primary" type="submit">
                   {t.formSubmit}
                 </Button>
               </Form>

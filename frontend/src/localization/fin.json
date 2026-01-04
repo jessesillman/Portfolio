@@ -72,9 +72,11 @@
         "phoneLabel": "Puhelin",
         "keepInTouch": "Pidetään yhteyttä!",
         "formName": "Nimi",
-        "formNamePlaceholder": "Syötä nimesi",
+        "formNamePlaceholder": "Kirjoita nimesi",
         "formEmail": "Sähköposti",
-        "formEmailPlaceholder": "Syötä sähköpostisi",
+        "formEmailPlaceholder": "Kirjoita sähköpostisi",
+        "formTitle": "Aihe",
+        "formTitlePlaceholder": "Kirjoita viestisi aihe",
         "formMessage": "Viesti",
         "formMessagePlaceholder": "Kirjoita viestisi",
         "formSubmit": "Lähetä"
