@@ -23,11 +23,11 @@ const ContactForm = () => {
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
       .then(() => {
-        alert(t.formSent || 'Message sent.');
+        alert(t.formSent || 'Message sent successfully.');
         formRef.current.reset();
       }, (error) => {
         console.error('EmailJS error:', error);
-        alert(t.formSendError || 'There was a problem sending your message.');
+        alert(t.formSendError || 'Oops! There was a problem sending your message.');
       });
   };
 

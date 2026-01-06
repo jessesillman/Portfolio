@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <>
       <Navbar bg="light" expand="lg">
-        <Container>
+        <Container> 
           <Navbar.Brand as={Link} to="/">Jesse Sillman</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -24,7 +24,6 @@ const Layout = () => {
               <Nav.Link as={Link} to="/contact">{t.contact}</Nav.Link>
               <Dropdown align="end" className="ms-3">
                 <Dropdown.Toggle variant="link" id="dropdown-language" style={{ color: "black", textDecoration: "none" }}>
-                
                   {language.toUpperCase()}
                 </Dropdown.Toggle>
                 <Dropdown.Menu>

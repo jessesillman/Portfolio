@@ -8,7 +8,7 @@
     },
     "Home": {
         "greeting": "Hei, mä oon Jesse!",
-        "introduction": "Olen viimeisen vuoden tietotekniikan insinööriopiskelija Kaakkois-Suomen ammattikorkeakoulusta, erikoistuen Full Stack -kehitykseen, koneoppimiseen ja moderneihin teknologioihin (erityisesti Ciscolla).",
+        "introduction": "Olen viimeisen vuoden tietotekniikan insinööriopiskelija Kaakkois-Suomen ammattikorkeakoulusta, erikoistuen Full Stack -kehitykseen, koneoppimiseen ja moderneihin teknologioihin.",
         "cv": "CV:ni",
         "cisco": "Cisco-sertifikaatit",
         "aws": "AWS-sertifikaatit",
@@ -70,7 +70,7 @@
         "contactTitle": "Yhteystiedot",
         "emailLabel": "Sähköposti",
         "phoneLabel": "Puhelin",
-        "keepInTouch": "Pidetään yhteyttä!",
+        "keepInTouch": "Laita mulle viestiä niin jutellaan!",
         "formName": "Nimi",
         "formNamePlaceholder": "Kirjoita nimesi",
         "formEmail": "Sähköposti",
@@ -79,6 +79,6 @@
         "formTitlePlaceholder": "Kirjoita viestisi aihe",
         "formMessage": "Viesti",
         "formMessagePlaceholder": "Kirjoita viestisi",
-        "formSubmit": "Lähetä"
+        "formSubmit": "Lähetä Viesti"
     }
 }

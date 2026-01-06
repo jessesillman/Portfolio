@@ -8,11 +8,11 @@
     },
     "Home": {
         "greeting": "Hello, my name is Jesse!",
-        "introduction": "I am a final year Information Technology (B.Eng.) student from South-Eastern Finland University of Applied Sciences, specializing in Full Stack development, machine learning, and modern technologies (especially Cisco).",
+        "introduction": "I am a final year Information Technology (B.Eng.) student from South-Eastern Finland University of Applied Sciences, specializing in full-stack development, machine learning, and modern network technologies. I am currently seeking new job opportunities to further develop my skills and contribute to exciting projects.",
         "cv": "My CV",
         "cisco": "My Cisco-issued certificates",
         "aws": "My AWS-issued certificates",
-        "transcript": "If you would like to to view my current academic transcript, please contact me directly."
+        "transcript": "If you would like to view my current academic transcript, please contact me directly."
     },
     "Skills": {
         "title": "Skills",
@@ -70,7 +70,7 @@
         "contactTitle": "Contact Information",
         "emailLabel": "Email",
         "phoneLabel": "Phone",
-        "keepInTouch": "Let's keep in touch!",
+        "keepInTouch": "Let's get the conversation started!",
         "formName": "Name",
         "formNamePlaceholder": "Enter your name",
         "formEmail": "Email",
@@ -79,6 +79,6 @@
         "formTitlePlaceholder": "Enter the title",
         "formMessage": "Message",
         "formMessagePlaceholder": "Enter your message",
-        "formSubmit": "Submit"
+        "formSubmit": "Send Message"
     }
 }
